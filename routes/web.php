@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,3 +15,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/users', function (){
+    return DB::table('users')->get();
+});
+
+Route::get('/products', function (){
+    return DB::table('products')->get();
+});
+
+Route::post('/products', 'ProductsController@create');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
