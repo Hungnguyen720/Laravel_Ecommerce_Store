@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\DB;
 
 class ProductsController extends Controller
 {
-    //
     public function create(Request $request){
         DB::table('products')->insertGetId([
             'name' => $request['name'],

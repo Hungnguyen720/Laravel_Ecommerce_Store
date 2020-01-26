@@ -1,0 +1,49 @@
+.has-flex {
+    display: flex;
+}
+
+.flex-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-space-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-yellow {
+    background-color: yellow;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+.ml-1 {
+    margin-left: .25rem
+}
+
+.ml-2 {
+    margin-left: .5rem
+}
+
+.ml-3 {
+    margin-left: 1rem
+}
+
+.mb-4{
+    margin-bottom: 2rem;
+}

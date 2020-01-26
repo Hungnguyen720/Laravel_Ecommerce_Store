@@ -11356,31 +11356,6 @@ a.text-dark:focus {
   }
 }
 
-.has-flex {
-  display: -webkit-box;
-  display: flex;
-}
-
-.bg-black {
-  background-color: black;
-}
-
-.bg-red {
-  background-color: red;
-}
-
-.bg-yellow {
-  background-color: yellow;
-}
-
-.bg-blue {
-  background-color: blue;
-}
-
-.bg-green {
-  background-color: green;
-}
-
 .product-category {
   width: 25%;
 }
@@ -11421,5 +11396,61 @@ a.text-dark:focus {
     width: 100%;
     height: auto;
   }
+}
+
+.has-flex {
+  display: -webkit-box;
+  display: flex;
+}
+
+.flex-vertical {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.flex-space-between {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.ml-3 {
+  margin-left: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
 }
 

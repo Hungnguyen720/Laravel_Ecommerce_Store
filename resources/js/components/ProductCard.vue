@@ -1,47 +1,45 @@
+
+
 <template>
-    <div>
-    <h1>product card</h1>
-    <div class="card card-body mb-2" v-for="item in products" v-bind:key="item.id">
-        <h3>{{ item.name}}</h3>
-        <h3>{{item.type}}</h3>
-        <h3>{{item.quantity}}</h3>
-        <h3>{{item.price}}</h3>
-        
-    </div>
-    <h1>test</h1>
+    <div class="has-flex container">
+    <div class="card ml-3" style="width: 20rem;"
+        v-for="product in products"
+        v-bind:key="product.id"
+        >
+            <a v-bind:href = "'details/' + product.id"> <img class="card-img-top" v-bind:src= product.img alt="Card image cap" /></a>
+            <div class="card-body"/>
+            <h3>{{ product.name}}</h3>
+            <h3>{{product.type}}</h3>
+            <h3>${{product.price}}</h3>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-    data(){
+    data() {
         return {
             products: [],
-            product:{
-                id:'',
-                name: '',
-                type: '',
-                quantity: '',
-                price: ''
-            },
             product_id: '',
             pagination: {},
             edit: false
         }
     },
 
-    created() {
-        this.fetchProducts();
+     created() {
+       this.fetchProducts();
+
     },
 
     methods: {
         fetchProducts(){
-            axios.get('/products')
+            fetch('/api/products')
+            .then(res => res.json ())
             .then(res => {
-                console.log(res.data)
-                this.product = res.data
+                this.products = res
+                console.log(res)
             })
         }
-    }
+    },
 }
 </script>

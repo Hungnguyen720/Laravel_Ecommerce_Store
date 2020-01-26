@@ -1922,17 +1922,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       products: [],
-      product: {
-        id: '',
-        name: '',
-        type: '',
-        quantity: '',
-        price: ''
-      },
       product_id: '',
       pagination: {},
       edit: false
@@ -1945,9 +1941,11 @@ __webpack_require__.r(__webpack_exports__);
     fetchProducts: function fetchProducts() {
       var _this = this;
 
-      axios.get('/products').then(function (res) {
-        console.log(res.data);
-        _this.product = res.data;
+      fetch('/api/products').then(function (res) {
+        return res.json();
+      }).then(function (res) {
+        _this.products = res;
+        console.log(res);
       });
     }
   }
@@ -37337,8 +37335,14 @@ var staticRenderFns = [
       { staticClass: "navbar navbar-expands-sm navbar-dark bg-info mb-2" },
       [
         _c("div", { staticClass: "container" }, [
-          _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
-            _vm._v("products")
+          _c(
+            "a",
+            { staticClass: "navbar-brand", attrs: { href: "/products/list" } },
+            [_vm._v("products")]
+          ),
+          _vm._v(" "),
+          _c("a", { staticClass: "navbar-brand", attrs: { href: "/admin" } }, [
+            _vm._v("admin")
           ])
         ])
       ]
@@ -37368,24 +37372,34 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    [
-      _c("h1", [_vm._v("product card")]),
-      _vm._v(" "),
-      _vm._l(_vm.products, function(item) {
-        return _c("div", { key: item.id, staticClass: "card card-body mb-2" }, [
-          _c("h3", [_vm._v(_vm._s(item.name))]),
+    { staticClass: "has-flex container" },
+    _vm._l(_vm.products, function(product) {
+      return _c(
+        "div",
+        {
+          key: product.id,
+          staticClass: "card ml-3",
+          staticStyle: { width: "20rem" }
+        },
+        [
+          _c("a", { attrs: { href: "details/" + product.id } }, [
+            _c("img", {
+              staticClass: "card-img-top",
+              attrs: { src: product.img, alt: "Card image cap" }
+            })
+          ]),
           _vm._v(" "),
-          _c("h3", [_vm._v(_vm._s(item.type))]),
+          _c("div", { staticClass: "card-body" }),
           _vm._v(" "),
-          _c("h3", [_vm._v(_vm._s(item.quantity))]),
+          _c("h3", [_vm._v(_vm._s(product.name))]),
           _vm._v(" "),
-          _c("h3", [_vm._v(_vm._s(item.price))])
-        ])
-      }),
-      _vm._v(" "),
-      _c("h1", [_vm._v("test")])
-    ],
-    2
+          _c("h3", [_vm._v(_vm._s(product.type))]),
+          _vm._v(" "),
+          _c("h3", [_vm._v("$" + _vm._s(product.price))])
+        ]
+      )
+    }),
+    0
   )
 }
 var staticRenderFns = []
@@ -49776,8 +49790,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! c:\code\Laravel_Ecommerce_Store\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! c:\code\Laravel_Ecommerce_Store\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\code\Laravel_Ecommerce_Store\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\code\Laravel_Ecommerce_Store\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
