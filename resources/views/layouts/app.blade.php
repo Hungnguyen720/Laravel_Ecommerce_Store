@@ -31,7 +31,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <div class="container">
+                            <a href="/products/list" class="navbar-brand">products</a>
+                            <a href="/admin" class="navbar-brand">admin</a>
+                        </div>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -53,12 +56,14 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}" }}>
+                                        Profile
+                                </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
@@ -69,9 +74,6 @@
                 </div>
             </div>
         </nav>
-        <div id="app">
-        <menus></menus>
-        <div>
             <main class="py-4">
                 @yield('content')
     <script src="{{ asset('js/app.js')}}"></script>

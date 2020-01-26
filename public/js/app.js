@@ -37323,32 +37323,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("nav", {
+    staticClass: "navbar navbar-expands-sm navbar-dark bg-info mb-2"
+  })
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "nav",
-      { staticClass: "navbar navbar-expands-sm navbar-dark bg-info mb-2" },
-      [
-        _c("div", { staticClass: "container" }, [
-          _c(
-            "a",
-            { staticClass: "navbar-brand", attrs: { href: "/products/list" } },
-            [_vm._v("products")]
-          ),
-          _vm._v(" "),
-          _c("a", { staticClass: "navbar-brand", attrs: { href: "/admin" } }, [
-            _vm._v("admin")
-          ])
-        ])
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
