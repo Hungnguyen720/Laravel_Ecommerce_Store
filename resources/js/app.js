@@ -6,28 +6,45 @@
 
 require('./bootstrap');
 
+
 window.Vue = require('vue');
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('products', require('./components/ProductCard.vue').default);
-Vue.component('menus', require('./components/Menus.vue').default);
+Vue.component('adminsidebar', require('./components/AdminSidebar.vue').default);
+Vue.component('admindashboard', require('./components/AdminDashboard.vue').default);
+Vue.component('adminanalytics', require('./components/AdminAnalytics.vue').default);
+Vue.component('adminproducts', require('./components/AdminProducts.vue').default);
+Vue.component('adminorders', require('./components/AdminOrders.vue').default);
+Vue.component('adminmanageusers', require('./components/AdminManageUsers.vue').default);
+Vue.component('adminhome', require('./components/AdminHome.vue').default);
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+
+document.addEventListener("DOMContentLoaded", function(event) {
 
 const app = new Vue({
     el: '#app',
 });
+
+const app2 = new Vue({
+    el: '#app2',
+});
+
+const app3 = new Vue({
+    el: '#app3',
+});
+
+const app4 = new Vue({
+    el: '#app4',
+});
+
+const app5 = new Vue({
+    el: '#app5',
+});
+
+const app6 = new Vue({
+    el: '#app6',
+});
+})
+

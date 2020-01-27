@@ -1,9 +1,9 @@
 
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
-
-
-<h1>Admin Dashboard</h1>
+<div id="app">
+    <admindashboard></admindashboard>
+</div>
 
 @endsection
