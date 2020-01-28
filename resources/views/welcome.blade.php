@@ -1,100 +1,78 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+<div class="hero">
+    <div class="element-wrapper">
+    <img src="{{asset('assets/Hero.jpg')}}">
+    </div>
+</div>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+<div class="about-demo">
+    <h4><u>Ecommerce Website built in Laravel by Hung Nguyen</u></h4>
+    <h5>Hello! Thank you for visiting my Ecommerce Demo site.</h5>
+</div>
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+<div style="max-width: 100%">
+<div class=" product-categories has-flex">
+    <div class="product-category">
+        <div class="product-category-wrapper">
+                <div class="element-wrapper">
+                <img src={{asset('assets/product_category_1.png')}}>
                 </div>
-            @endif
+        </div>
+    </div>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+    <div class="product-category">
+        <div class="product-category-wrapper">
+            <div class="element-wrapper">
+                <img src={{asset('assets/product_category_2.jpg')}}>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+
+    <div class="product-category">
+        <div class="product-category-wrapper">
+            <div class="element-wrapper">
+                <img src={{asset('assets/product_category_3.jpg')}}>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-category">
+        <div class="product-category-wrapper">
+            <div class="element-wrapper">
+                <img src={{asset('assets/product_category_4.jpg')}}>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="has-flex max-width-100vw">
+    <div class="sub-hero ">
+        <div class="section-1 bg-red element-wrapper">
+            <img src={{asset('assets/section-1.jpg')}} style="height: auto">
+        </div>
+    </div>
+    <div class="sub-hero has-flex" style="height: auto; width:50vw">
+        <div class="section-1 element-wrapper flex-vertical-center container">
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus qui repellendus at, omnis enim sunt. Iure earum dolore culpa, fugiat corrupti praesentium hic est, dolorem at odit illum neque eos!</h3>
+        </div>
+    </div>
+</div>
+
+<div class="has-flex max-width-100vw">
+    <div class="sub-hero has-flex" style="height: auto; width:50vw">
+        <div class="section-1 element-wrapper flex-vertical-center container ">
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus qui repellendus at, omnis enim sunt. Iure earum dolore culpa, fugiat corrupti praesentium hic est, dolorem at odit illum neque eos!</h3>
+        </div>
+    </div>
+    <div class="sub-hero " style="height: auto; width: 50vw;">
+        <div class="section-1 element-wrapper">
+            <img src={{asset('assets/section-2.jpg')}} style="height: auto">
+        </div>
+    </div>
+</div>
+@endsection

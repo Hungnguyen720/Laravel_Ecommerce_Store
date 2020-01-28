@@ -36,6 +36,14 @@ Route::prefix('user')->group(function(){
 
 });
 
+Route::prefix('api')->group(function(){
+
+    Route::get('/orders', 'OrdersController@getOrders')->name('orders.all');
+    Route::post('/orders', 'OrdersController@createOrders')->name('orders.create');
+
+});
+
+
 
 
 Route::middleware('auth:api')->get('/users', function (){

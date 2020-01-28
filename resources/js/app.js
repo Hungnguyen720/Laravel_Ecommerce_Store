@@ -19,6 +19,8 @@ Vue.component('adminproducts', require('./components/AdminProducts.vue').default
 Vue.component('adminorders', require('./components/AdminOrders.vue').default);
 Vue.component('adminmanageusers', require('./components/AdminManageUsers.vue').default);
 Vue.component('adminhome', require('./components/AdminHome.vue').default);
+Vue.component('randomchart', require('./components/RandomChart.vue').default);
+
 
 
 document.addEventListener("DOMContentLoaded", function(event) {

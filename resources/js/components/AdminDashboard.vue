@@ -2,7 +2,7 @@
 <div>
     <nav id="sidebar">
         <div class="sidebar-header">
-            <h3>Dashboard</h3>
+            <button class="btn" v-on:click="displayContent(5)"><h3 class="c-w">Dashboard</h3></button>
         </div>
         <ul class="list-unstyled components">
             <li>
@@ -22,7 +22,7 @@
 
     <div class="container">
         <span style="display: none">{{content}}</span>
-                    <div v-if="content == 0" id="app3">
+                    <div v-if="content == 5" id="app3">
                 <adminhome></adminhome>
             </div>
             <div v-if="content == 1" id="app3">
@@ -51,7 +51,8 @@ export default {
         }
     },
 
-     created() {
+     mounted() {
+         this.content = 3
     },
 
     methods: {

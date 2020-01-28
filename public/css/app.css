@@ -11384,6 +11384,15 @@ a.text-dark:focus {
   position: relative;
 }
 
+.sub-hero {
+  height: auto;
+  width: 50vw;
+}
+
+.about-demo {
+  text-align: center;
+}
+
 @media screen and (max-width: 766px) {
   .product-categories {
     -webkit-box-orient: vertical;
@@ -11409,6 +11418,24 @@ a.text-dark:focus {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
+}
+
+.flex-vertical-center {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.max-width-100vw {
+  max-width: 100vw;
+}
+
+.c-w {
+  color: white;
 }
 
 .flex-space-between {

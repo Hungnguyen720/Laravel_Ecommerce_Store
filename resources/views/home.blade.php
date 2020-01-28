@@ -57,16 +57,16 @@
         </div>
     </div>
     <div class="sub-hero has-flex" style="height: auto; width:50vw">
-        <div class="section-1 element-wrapper">
-            <h1>>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus qui repellendus at, omnis enim sunt. Iure earum dolore culpa, fugiat corrupti praesentium hic est, dolorem at odit illum neque eos!</h1>
+        <div class="section-1 element-wrapper flex-vertical-center ">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus qui repellendus at, omnis enim sunt. Iure earum dolore culpa, fugiat corrupti praesentium hic est, dolorem at odit illum neque eos!</h1>
         </div>
     </div>
 </div>
 
 <div style="width: 100vw" class="has-flex">
     <div class="sub-hero has-flex" style="height: auto; width:50vw">
-        <div class="section-1 element-wrapper">
-            <h1>>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus qui repellendus at, omnis enim sunt. Iure earum dolore culpa, fugiat corrupti praesentium hic est, dolorem at odit illum neque eos!</h1>
+        <div class="section-1 element-wrapper flex-vertical-center ">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus qui repellendus at, omnis enim sunt. Iure earum dolore culpa, fugiat corrupti praesentium hic est, dolorem at odit illum neque eos!</h1>
         </div>
     </div>
     <div class="sub-hero " style="height: auto; width: 50vw;">
