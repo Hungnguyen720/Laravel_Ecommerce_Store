@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Auth;
 
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,7 +30,6 @@ Route::prefix('admin')->group(function(){
 
 Route::prefix('user')->group(function(){
 
-    Route::get('/', 'UserController@index')->name('user.profile');
     Route::get('/orders', 'UserController@getOrders')->name('user.orders');
 
 });
@@ -40,15 +38,11 @@ Route::prefix('api')->group(function(){
 
     Route::get('/orders', 'OrdersController@getOrders')->name('orders.all');
     Route::post('/orders', 'OrdersController@createOrders')->name('orders.create');
+    Route::get('/orders/totalsales', 'OrdersController@getOrderstotalsales')->name('orders.totalsales');
+    Route::get('/orders/totalorders', 'OrdersController@getOrdersGroupByDay')->name('orders.groupbyday');
 
 });
 
-
-
-
-Route::middleware('auth:api')->get('/users', function (){
-    return DB::table('users')->get();
-});
 
 Route::get('products/details/{id}', function ($id){
     $products = DB::table('products')->where('id', $id)->get();

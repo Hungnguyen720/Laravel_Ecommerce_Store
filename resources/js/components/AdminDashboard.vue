@@ -52,13 +52,14 @@ export default {
     },
 
      mounted() {
-         this.content = 3
+         this.content = 1
+         this.fetchData();
     },
 
     methods: {
         displayContent(id){
             this.content=id;
-        }
+        },
     },
 }
 </script>

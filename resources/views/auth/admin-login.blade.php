@@ -5,6 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+                <div class="text-center">
+                    <span> To access the admin dashboard please use:  </span>
+                    <span> email: <u>admin@test.com</u> password: <u>password</u> </span>
+                </div>
                 <div class="card-header">Admin Login</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('admin.login.submit') }}">

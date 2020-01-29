@@ -13,18 +13,29 @@
                     <thead>
                         <tr>
                             <th scope="col">Product</th>
+                            <th></th>
                             <th scope="col">Inventory</th>
                             <th scope="col">Type</th>
                             <th scope="col">Price</th>
                         </tr>
                     </thead>
+                    <tbody>
+                        <tr  v-for="product in products" v-bind:key="product.id">
+                            <td><img style="max-width: 200px" v-bind:src= product.img ></td>
+                            <td>{{ product.name }}</td>
+                            <td>{{ product.quantity }}</td>
+                            <td>{{ product.type }}</td>
+                            <td>{{ product.price}}</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
     </div>
 </template>
 
 <script>
-/*
+
 export default {
     data() {
         return {
@@ -51,6 +62,6 @@ export default {
         }
     },
 }
-*/
+
 </script>
 
