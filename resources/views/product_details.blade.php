@@ -12,6 +12,17 @@
         <span>{{ $type }}</span> <span>{{ $price}}</span>
     </div>
     <h1 mb-4>{{ $name}}</h1>
+    <span>
+        Select Size
+    </span>
+    <div class="sizes-container">
+        <div><p>xs</p></div>
+        <div>s</div>
+        <div>m</div>
+        <div>l</div>
+        <div>xl</div>
+        <div>2xl</div>
+    </div>
     <button> add to cart </button>
 </div>
 

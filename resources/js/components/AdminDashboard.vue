@@ -14,9 +14,11 @@
             <li>
                 <a v-on:click="displayContent(3)" href="#">Orders</a>
             </li>
+            <!--
             <li>
                 <a v-on:click="displayContent(4)" href="#">Users</a>
             </li>
+            -->
         </ul>
     </nav>
 
@@ -53,7 +55,6 @@ export default {
 
      mounted() {
          this.content = 1
-         this.fetchData();
     },
 
     methods: {

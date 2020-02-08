@@ -1,18 +1,18 @@
 
 
 <template>
-    <div class="has-flex container">
-    <div class="card ml-3" style="width: 20rem;"
+<div class="container">
+    <div class="card ml-3 mb-4" style="width: 20rem; float: left;"
         v-for="product in products"
         v-bind:key="product.id"
         >
-            <a v-bind:href = "'details/' + product.id"> <img class="card-img-top" v-bind:src= product.img alt="Card image cap" /></a>
+            <a v-bind:href = "'/shop/' + product.slug"> <img class="card-img-top" v-bind:src= product.img alt="Card image cap" /></a>
             <div class="card-body"/>
-            <h3>{{ product.name}}</h3>
+            <h3>{{product.name}}</h3>
             <h3>{{product.type}}</h3>
             <h3>${{product.price}}</h3>
         </div>
-    </div>
+</div>
 </template>
 
 <script>
@@ -28,7 +28,6 @@ export default {
 
      created() {
        this.fetchProducts();
-
     },
 
     methods: {

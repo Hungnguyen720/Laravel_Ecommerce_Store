@@ -1959,15 +1959,26 @@ __webpack_require__.r(__webpack_exports__);
     return {
       message: 'Hello, world',
       content: 0,
-      dataArray: []
+      dataArray: [],
+      ordersPendingFulfillment: 0
     };
   },
   mounted: function mounted() {
     this.content = 1;
+    this.getOrdersPendingFulfillment();
   },
   methods: {
     displayContent: function displayContent(id) {
       this.content = id;
+    },
+    getOrdersPendingFulfillment: function getOrdersPendingFulfillment() {
+      var _this = this;
+
+      fetch('api/orders/pendingfulfillment').then(function (res) {
+        return res.json();
+      }).then(function (res) {
+        _this.ordersPendingFulfillment = res;
+      });
     }
   }
 });
@@ -2027,6 +2038,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2036,7 +2049,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.content = 1;
-    this.fetchData();
   },
   methods: {
     displayContent: function displayContent(id) {
@@ -2405,7 +2417,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       this.datacollection = {
         labels: this.dateArray,
         datasets: [{
-          label: 'Total Sales',
+          label: 'Total Orders',
           backgroundColor: '#f87979',
           data: this.valueArray
         }]
@@ -2414,13 +2426,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     getData: function getData() {
       var _this = this;
 
-      fetch('api/orders/totalsales').then(function (res) {
+      fetch('api/orders/totalorders').then(function (res) {
         return res.json();
       }).then(function (res) {
         var dataArray = new Array();
 
         for (var i = 0; i < res.length; i++) {
-          dataArray[res[i].date_ordered] = res[i].order_total;
+          dataArray[res[i].order_date] = res[i].total;
         }
 
         var dateData = Object.keys(dataArray);
@@ -73385,21 +73397,19 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _vm._m(0)
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-12" }, [
-        _c("h1", [_vm._v("Open Orders Pending")])
+        _c("h1", [
+          _vm._v(
+            _vm._s(_vm.ordersPendingFulfillment) +
+              " Open Orders Pending Fulfillment "
+          )
+        ])
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -73481,21 +73491,6 @@ var render = function() {
               }
             },
             [_vm._v("Orders")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c(
-            "a",
-            {
-              attrs: { href: "#" },
-              on: {
-                click: function($event) {
-                  return _vm.displayContent(4)
-                }
-              }
-            },
-            [_vm._v("Users")]
           )
         ])
       ])
@@ -73948,17 +73943,17 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "has-flex container" },
+    { staticClass: "container" },
     _vm._l(_vm.products, function(product) {
       return _c(
         "div",
         {
           key: product.id,
-          staticClass: "card ml-3",
-          staticStyle: { width: "20rem" }
+          staticClass: "card ml-3 mb-4",
+          staticStyle: { width: "20rem", float: "left" }
         },
         [
-          _c("a", { attrs: { href: "details/" + product.id } }, [
+          _c("a", { attrs: { href: "/shop/" + product.slug } }, [
             _c("img", {
               staticClass: "card-img-top",
               attrs: { src: product.img, alt: "Card image cap" }
@@ -86264,15 +86259,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*!****************************************************!*\
   !*** ./resources/js/components/AdminAnalytics.vue ***!
   \****************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _AdminAnalytics_vue_vue_type_template_id_11bdcebc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AdminAnalytics.vue?vue&type=template&id=11bdcebc& */ "./resources/js/components/AdminAnalytics.vue?vue&type=template&id=11bdcebc&");
 /* harmony import */ var _AdminAnalytics_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AdminAnalytics.vue?vue&type=script&lang=js& */ "./resources/js/components/AdminAnalytics.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _AdminAnalytics_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _AdminAnalytics_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -86302,7 +86296,7 @@ component.options.__file = "resources/js/components/AdminAnalytics.vue"
 /*!*****************************************************************************!*\
   !*** ./resources/js/components/AdminAnalytics.vue?vue&type=script&lang=js& ***!
   \*****************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

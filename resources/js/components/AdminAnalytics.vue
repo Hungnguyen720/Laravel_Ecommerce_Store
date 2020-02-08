@@ -27,7 +27,7 @@
     </div>
         <div class="row">
             <div class="col-12">
-                <h1>Open Orders Pending</h1>
+                <h1>{{ ordersPendingFulfillment }} Open Orders Pending Fulfillment </h1>
             </div>
         </div>
 </div>
@@ -39,18 +39,27 @@ export default {
         return {
             message: 'Hello, world',
             content: 0,
-            dataArray: []
+            dataArray: [],
+            ordersPendingFulfillment: 0
         }
     },
 
      mounted() {
          this.content = 1
+         this.getOrdersPendingFulfillment();
     },
 
     methods: {
         displayContent(id){
             this.content=id;
         },
+        getOrdersPendingFulfillment(){
+             fetch('api/orders/pendingfulfillment')
+            .then(res => res.json ())
+            .then(res => {
+                this.ordersPendingFulfillment = res;
+            })
+        }
     },
 }
 </script>

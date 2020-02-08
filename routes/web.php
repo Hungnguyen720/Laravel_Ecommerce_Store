@@ -19,6 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/', 'LandingPageController@index')->name('landingPage');
+
 
 Route::prefix('admin')->group(function(){
 
@@ -39,9 +41,27 @@ Route::prefix('api')->group(function(){
     Route::get('/orders', 'OrdersController@getOrders')->name('orders.all');
     Route::post('/orders', 'OrdersController@createOrders')->name('orders.create');
     Route::get('/orders/totalsales', 'OrdersController@getOrderstotalsales')->name('orders.totalsales');
-    Route::get('/orders/totalorders', 'OrdersController@getOrdersGroupByDay')->name('orders.groupbyday');
+    Route::get('/orders/totalorders', 'OrdersController@getOrdersCountByDay')->name('orders.countbyday');
+    Route::get('/orders/pendingfulfillment', 'OrdersController@getOrdersPendingFulfillment')->name('orders.pendingfulfillment');
+});
+
+Route::prefix('shop')->group(function(){
+
+    Route::get('/', 'CartController@index')->name('cart.home');
+    Route::get('/{product}', 'ShopController@show')->name('shop.show');
 
 });
+
+
+
+Route::prefix('cart')->group(function(){
+
+    Route::get('/', 'CartController@index')->name('cart.index');
+    Route::post('/', 'CartController@index')->name('cart.store');
+
+});
+
+
 
 
 Route::get('products/details/{id}', function ($id){

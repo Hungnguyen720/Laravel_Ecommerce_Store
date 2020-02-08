@@ -70,6 +70,9 @@
                                 </div>
                             </li>
                         @endguest
+                            <li>
+                                <a class="nav-link" href="{{route('cart.index')}}"> Cart </a>
+                            </li>
                     </ul>
                 </div>
             </div>

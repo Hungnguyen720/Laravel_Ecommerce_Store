@@ -31,7 +31,7 @@
           labels: this.dateArray,
           datasets: [
             {
-              label: 'Total Sales',
+              label: 'Total Orders',
               backgroundColor: '#f87979',
               data: this.valueArray
             }
@@ -39,12 +39,12 @@
         }
       },
         getData() {
-            fetch('api/orders/totalsales')
+            fetch('api/orders/totalorders')
             .then(res => res.json ())
             .then(res => {
                 var dataArray = new Array();
                 for(let i=0; i< res.length; i++){
-                    dataArray[res[i].date_ordered] = res[i].order_total;
+                    dataArray[res[i].order_date] = res[i].total;
                 }
                 var dateData = Object.keys(dataArray)
                 var salesData = Object.values(dataArray)
