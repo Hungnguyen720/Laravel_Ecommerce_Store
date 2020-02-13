@@ -7031,6 +7031,7 @@ a.close.disabled {
   content: "";
 }
 
+
 .carousel-item {
   position: relative;
   display: none;
@@ -12057,7 +12058,7 @@ p {
 }
 
 .menu-list ul li {
-  margin-left: 16px;
+  margin-left: 2%;
   font-weight: 500;
   font-size: 16px;
 }

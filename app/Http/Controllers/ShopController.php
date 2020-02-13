@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Product;
-use Illuminate\Http\Request;
+use App\Collections;
+use Request;
+
 
 class ShopController extends Controller
 {
@@ -16,6 +18,31 @@ class ShopController extends Controller
     {
         //
     }
+
+    public function categoryMenView(){
+        return view('category-men');
+    }
+
+    public function categoryWomenView(){
+        return view('category-women');
+    }
+
+    public function collectionView(){
+        $urlPath =  Request::url();
+
+        $urlArray = explode("/" ,$urlPath);
+        $category = $urlArray[3];
+        $collection = $urlArray[5];
+
+        $subCollections = Collections::all();
+
+        return view('collection')->with([
+            'category' => $category,
+            'collection' => $collection,
+            'subCollections' => $subCollections
+            ]);
+    }
+
 
     /**
      * Show the form for creating a new resource.

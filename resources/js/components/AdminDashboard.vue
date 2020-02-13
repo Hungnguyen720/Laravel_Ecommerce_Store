@@ -20,6 +20,8 @@
             </li>
             -->
         </ul>
+
+        <a href="#" class="btn btn-default">Logout</a>
     </nav>
 
     <div class="container">

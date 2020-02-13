@@ -8,9 +8,7 @@
             <h1 class="menu-header">Men</h1>
             <div class="menu-list">
                 <ul>
-                    <li>Shoes</li>
-                    <li>Tops</li>
-                    <li>Bottoms</li>
+                    <li><a href="<?php echo url()->current()?>/collection/shoes">Shoes</a></li>
                 </ul>
             </div>
         </div>

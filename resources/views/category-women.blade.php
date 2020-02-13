@@ -8,9 +8,7 @@
             <h1 class="menu-header">Women</h1>
             <div class="menu-list">
                 <ul>
-                    <li><a href="#">Shoes</a></li>
-                    <li><a href="#">Tops</a></li>
-                    <li><a href="#">Bottoms</a></li>
+                    <li><a href="<?php echo url()->current()?>/collection/shoes">Shoes</a></li>
                 </ul>
             </div>
         </div>
@@ -22,74 +20,274 @@
         </div>
     </div>
     <!--This week's picks -->
-    <h1>This weeks picks</h1>
     <div class="row">
-        <div class="col-md">
-            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
-        </div>
-        <div class="col-md">
-            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
-        </div>
-        <div class="col-md">
-            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
-        </div>
-        <div class="col-md">
-            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
-        </div>
-        <div class="col-md">
-            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
-        </div>
-    </div>
+        <h1>This weeks picks</h1>
+        <div>
+            <div class="row">
+                <div class="col-md product-container">
+                    <div class="row">
+                        <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
+                    </div>
+                    <div class="row flex-md-column">
+                        <h4>
+                            Nike Air Max 90
+                        </h4>
+                        <p>
+                            Men's Shoe
+                        </p>
+                        <p>
+                            $100
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md product-container">
+                    <div class="row">
+                        <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
+                    </div>
+                    <div class="row flex-md-column">
+                        <h4>
+                            Nike Air Max 90
+                        </h4>
+                        <p>
+                            Men's Shoe
+                        </p>
+                        <p>
+                            $100
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md product-container">
+                    <div class="row">
+                        <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
+                    </div>
+                    <div class="row flex-md-column">
+                        <h4>
+                            Nike Air Max 90
+                        </h4>
+                        <p>
+                            Men's Shoe
+                        </p>
+                        <p>
+                            $100
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md product-container">
+                    <div class="row">
+                        <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
+                    </div>
+                    <div class="row flex-md-column">
+                        <h4>
+                            Nike Air Max 90
+                        </h4>
+                        <p>
+                            Men's Shoe
+                        </p>
+                        <p>
+                            $100
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md product-container">
+                    <div class="row">
+                        <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
+                    </div>
+                    <div class="row flex-md-column">
+                        <h4>
+                            Nike Air Max 90
+                        </h4>
+                        <p>
+                            Men's Shoe
+                        </p>
+                        <p>
+                            $100
+                        </p>
+                    </div>
+                </div>
+            </div>
     <!-- Best Sellers -->
-    <h1>Best Sellers</h1>
-    <div class="row">
-        <div class="col-md">
-            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
-        </div>
-        <div class="col-md">
-            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
-        </div>
-        <div class="col-md">
-            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
-        </div>
-        <div class="col-md">
-            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
-        </div>
-        <div class="col-md">
-            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
-        </div>
-    </div>
+ <div class="row">
+                <h1>Best Sellers</h1>
+            </div>
+            <div class="row">
+                <div class="col-md product-container">
+                    <div class="row">
+                        <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
+                    </div>
+                    <div class="row flex-md-column">
+                        <h4>
+                            Nike Air Max 90
+                        </h4>
+                        <p>
+                            Men's Shoe
+                        </p>
+                        <p>
+                            $100
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md product-container">
+                    <div class="row">
+                        <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
+                    </div>
+                    <div class="row flex-md-column">
+                        <h4>
+                            Nike Air Max 90
+                        </h4>
+                        <p>
+                            Men's Shoe
+                        </p>
+                        <p>
+                            $100
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md product-container">
+                    <div class="row">
+                        <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
+                    </div>
+                    <div class="row flex-md-column">
+                        <h4>
+                            Nike Air Max 90
+                        </h4>
+                        <p>
+                            Men's Shoe
+                        </p>
+                        <p>
+                            $100
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md product-container">
+                    <div class="row">
+                        <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
+                    </div>
+                    <div class="row flex-md-column">
+                        <h4>
+                            Nike Air Max 90
+                        </h4>
+                        <p>
+                            Men's Shoe
+                        </p>
+                        <p>
+                            $100
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md product-container">
+                    <div class="row">
+                        <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
+                    </div>
+                    <div class="row flex-md-column">
+                        <h4>
+                            Nike Air Max 90
+                        </h4>
+                        <p>
+                            Men's Shoe
+                        </p>
+                        <p>
+                            $100
+                        </p>
+                    </div>
+                </div>
+            </div>
     <!-- Our Fave -->
     <h1>Our Fave</h1>
-    <div class="row">
-        <div class="col-md">
+</div>
+<div class="row">
+    <div class="col-md product-container">
+        <div class="row">
             <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
         </div>
-        <div class="col-md">
-            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
-        </div>
-        <div class="col-md">
-            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
-        </div>
-        <div class="col-md">
-            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
-        </div>
-        <div class="col-md">
-            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
+        <div class="row flex-md-column">
+            <h4>
+                Nike Air Max 90
+            </h4>
+            <p>
+                Men's Shoe
+            </p>
+            <p>
+                $100
+            </p>
         </div>
     </div>
+    <div class="col-md product-container">
+        <div class="row">
+            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
+        </div>
+        <div class="row flex-md-column">
+            <h4>
+                Nike Air Max 90
+            </h4>
+            <p>
+                Men's Shoe
+            </p>
+            <p>
+                $100
+            </p>
+        </div>
+    </div>
+    <div class="col-md product-container">
+        <div class="row">
+            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
+        </div>
+        <div class="row flex-md-column">
+            <h4>
+                Nike Air Max 90
+            </h4>
+            <p>
+                Men's Shoe
+            </p>
+            <p>
+                $100
+            </p>
+        </div>
+    </div>
+    <div class="col-md product-container">
+        <div class="row">
+            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
+        </div>
+        <div class="row flex-md-column">
+            <h4>
+                Nike Air Max 90
+            </h4>
+            <p>
+                Men's Shoe
+            </p>
+            <p>
+                $100
+            </p>
+        </div>
+    </div>
+    <div class="col-md product-container">
+        <div class="row">
+            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
+        </div>
+        <div class="row flex-md-column">
+            <h4>
+                Nike Air Max 90
+            </h4>
+            <p>
+                Men's Shoe
+            </p>
+            <p>
+                $100
+            </p>
+        </div>
+    </div>
+</div>
     <!--Social -->
     <h1>Social</h1>
-    <div class="row">
-        <div class="col-md">
-            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
-        </div>
-        <div class="col-md">
-            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
-        </div>
-        <div class="col-md">
-            <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
-        </div>
+</div>
+<div class="row">
+    <div class="col-md">
+        <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
+    </div>
+    <div class="col-md">
+        <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
+    </div>
+    <div class="col-md">
+        <img style="height: 100%; width: 100%; object-fit: cover" src={{asset('assets/men_shoe_1.webp')}}>
     </div>
 </div>
 @endsection
