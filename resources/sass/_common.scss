@@ -2,9 +2,22 @@
     display: flex;
 }
 
+h1 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 16px;
+}
+
 .flex-vertical {
     display: flex;
     flex-direction: column;
+}
+
+.a-i-f-ex {
+    align-items: flex-end;
 }
 
 .flex-vertical-center {
@@ -22,9 +35,9 @@
 }
 
 .c-w {
-    color: white
+    color: white;
 }
-.flex-space-between{
+.flex-space-between {
     display: flex;
     justify-content: space-between;
 }
@@ -50,17 +63,17 @@
 }
 
 .ml-1 {
-    margin-left: .25rem
+    margin-left: 0.25rem;
 }
 
 .ml-2 {
-    margin-left: .5rem
+    margin-left: 0.5rem;
 }
 
 .ml-3 {
-    margin-left: 1rem
+    margin-left: 1rem;
 }
 
-.mb-4{
+.mb-4 {
     margin-bottom: 2rem;
 }

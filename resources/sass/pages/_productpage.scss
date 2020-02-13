@@ -1,0 +1,35 @@
+.menu-list {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu {
+    align-items: center;
+}
+
+.menu-list ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.product-container {
+    margin-right: 16px;
+}
+
+.menu-wrapper {
+    height: 20vh;
+    width: 100%;
+}
+
+.menu-list ul li {
+    margin-left: 2%;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.menu-header {
+    font-size: 24px;
+    font-weight: 500;
+    position: absolute;
+}
